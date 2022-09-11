@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Forca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="./assets/logo-alura.svg" />
+  </header>
+
+  <div class="container">
+    <div class="wrapper-start">
+      <button class="start-btn btn-length-18 " onclick="newGame()">Começar a jogar</button>
+      <button class="new-word-btn btn-length-18 " onclick="newWord(event)">Adicionar nova palavra</button>
+    </div>
+
+    <div class="wrapper-new-word">
+      <h1>Digite uma palavra ou frase</h1>
+      <input 
+        class="input-new-word" 
+        type="text" 
+        id="new-word" 
+        maxlength="8"
+        placeholder="Nova Palavra" 
+      />
+      <div class="alert-length">
+        <img src="/assets/interrogacao.svg" />Máx. de 8 letras
+      </div>
+      <div class="wrapper-new-word-btns">
+        <button class="start-btn btn-length-20" onclick="saveNewWord()">Salvar e começar</button>
+        <button class="new-word-btn btn-length-20" onclick="cancel()">Cancelar</button>
+      </div>
+    </div>
+
+    <div class="wrapper-game">
+      <div class="forca">
+        <div class="rectangle rectangle-1"></div>
+        <div class="rectangle rectangle-2"></div>
+        <div class="rectangle rectangle-3"></div>
+        <div class="rectangle rectangle-4"></div>
+        <div class="rectangle rectangle-5"></div>
+        <div class="rectangle rectangle-6"></div>
+        <div class="rectangle rectangle-7"></div>
+        <div class="rectangle rectangle-8"></div>
+        <div class="rectangle rectangle-9"></div>
+        <div class="rectangle rectangle-10"></div>
+      </div>
+
+      <div class="game-word"></div>
+
+      <div class="case-error">
+        
+      </div>
+      <div class="wrapper-new-word-btns">
+        <button class="start-btn btn-length-20" onclick="newGame()">Novo jogo</button>
+        <button class="new-word-btn btn-length-20" onclick="giveUp()">Desistir</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
